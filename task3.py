@@ -1,18 +1,18 @@
 # с клавиатуры вводятся числа, ввод завершается числом 0.
 # Определить, сколько было введено простых натуральных чисел
 # (которые делятся только сами на себя и на 1), и сколько составных.
-value = 1
+value = int(input())
+d = 2
+allcount = 0
 count = 0
 while value !=0:
+    allcount +=1
+    while value % d != 0:
+        d += 1
+    if d == value:
+        count += 1
     value = int(input())
-    count+=1
-    for i in range(2, value):
-        g = 0
-        for t in range(1, i):
-            if i % t == 0:
-                g = g + 1
-        if g == 1:
-            i+=1
+    d=2
+print("Положительных простых:",count, "Составных:",allcount-count)
 
-print("Положительных простые:",i, "Других:",count-i)
 
