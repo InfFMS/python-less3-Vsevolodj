@@ -4,19 +4,19 @@
 # Числа Фибоначчи – это последовательность чисел,
 # которая начинается с двух единиц и каждое следующее число
 # равно сумме двух предыдущих: 1, 1, 2, 3, 5, 8, 13, …
-a = 1
-b = 1
-c = 0
-n = int(input()) # число которое нужно нам найти
-for i in range(3,n)
-    c = a+b
-    a = b
-    b = c
-    print(c)
-
-
-# а теперь через рекурсию
-def F(n)
+def F(n):
     if n <=2:
         return 1
     return F(n-1)+F(n-2)
+value = int(input())
+s = []
+
+while value !=0:
+    i=1
+    while value>=F(i):
+        if value == F(i):
+              s = s + [value]
+        i+=1
+    value = int(input())
+print(max(s))
+
