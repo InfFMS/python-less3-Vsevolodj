@@ -18,5 +18,8 @@ while value !=0:
               s = s + [value]
         i+=1
     value = int(input())
-print(max(s))
+if len(s)!=0:
+    print(max(s))
+else:
+    print("Нет")
 
