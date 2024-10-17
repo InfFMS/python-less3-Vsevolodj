@@ -17,7 +17,10 @@ while val !=0:
         count +=1
 
     val = int(input())
-print("Cреднее:",sum/count)
+if count!=0:
+    print("Cреднее:",sum/count)
+else:
+    print("Нет")
 
 
 
